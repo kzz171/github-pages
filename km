@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Minha Página de Vendas</title>
+  <style>
+    body { font-family: Arial; text-align: center; padding: 40px; }
+    .pix { margin-top: 30px; }
+    button { padding: 10px 20px; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <h1>Produto Incrível</h1>
+  <p>Compre agora por apenas R$ 99,90</p>
+
+  <div class="pix">
+    <p><strong>Chave Pix:</strong> seuemail@exemplo.com</p>
+    <button onclick="copiarPix()">Copiar Chave Pix</button>
+  </div>
+
+  <div style="margin-top:20px;">
+    <p>Ou escaneie o QR Code Pix:</p>
+    <img src="qrcode-pix.png" alt="QR Code Pix" width="200">
+  </div>
+
+  <script>
+    function copiarPix() {
+      const chave = 'seuemail@exemplo.com';
+      navigator.clipboard.writeText(chave);
+      alert('Chave Pix copiada!');
+    }
+  </script>
+</body>
+</html>
